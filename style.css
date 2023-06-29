@@ -1,0 +1,82 @@
+* {
+    font-family: "Bebas Neue";
+}
+
+body {
+    background-color: black;
+    height: 80vh;
+}
+
+strong {
+    color: violet;
+}
+
+p {
+    font-size: larger;
+    text-align: center;
+}
+
+a {
+    color: darkred;
+}
+
+a:hover {
+    color: lightcoral;
+}
+
+.menubar {
+    display: inline;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.footer{
+    text-align: center;
+    color: darkred;
+}
+
+.header {
+    text-align: center;
+    color: darkred;
+    font-size: large;
+    background: black;
+}
+
+.navbar {
+    color: darkred;
+    text-align: center;
+    word-spacing: 40px;
+    font-size: large;
+    border-style: dotted;
+}
+
+#list, #list2{
+    list-style: none;
+    border: 3px white;
+}
+
+.middletext {
+    color: darkred;
+    font-size: medium;
+    display: inline-block;
+    background: red;
+    border-style: double;
+
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-image: url("mixedgifs.gif");
+    background-size: cover;
+}
+
+.event{
+    text-align: center;
+    color: darkred;
+    font-size: larger;
+}
+ li{
+     display: inline;
+ }
