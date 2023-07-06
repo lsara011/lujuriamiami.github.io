@@ -1,82 +1,137 @@
 * {
-    font-family: "Bebas Neue";
+    font-family: "Bebas Neue", serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background-color: black;
-    height: 80vh;
-}
-
-strong {
-    color: violet;
-}
-
-p {
-    font-size: larger;
-    text-align: center;
-}
-
-a {
     color: darkred;
+    background-color: black;
+    min-height: 100vh;
 }
 
-a:hover {
+li a button {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: black;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.navlinks {
+    list-style: none;
+}
+
+.navlinks li {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: larger;
+}
+
+.navlinks li a {
+    transition: all 0.3s ease 0s;
+}
+
+.navlinks li a:hover {
     color: lightcoral;
 }
 
-.menubar {
-    display: inline;
-    letter-spacing: 5px;
-    font-weight: bold;
+button {
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    background-color: darkred;
+    margin-left: 20px;
 }
 
-.footer{
-    text-align: center;
+button:hover {
+    background-color: lightcoral;
+}
+
+a, h1 {
     color: darkred;
 }
 
-.header {
-    text-align: center;
-    color: darkred;
-    font-size: large;
-    background: black;
+h1 {
+    margin-right: auto;
 }
 
-.navbar {
-    color: darkred;
-    text-align: center;
-    word-spacing: 40px;
-    font-size: large;
-    border-style: dotted;
-}
 
-#list, #list2{
+.eventlist {
     list-style: none;
-    border: 3px white;
+    text-align: center;
+    font-size: 25px;
 }
 
-.middletext {
-    color: darkred;
-    font-size: medium;
+.eventlist li {
     display: inline-block;
-    background: red;
-    border-style: double;
-
+    letter-spacing: 5px;
 }
-.container {
+
+.footer {
+    position: sticky;
+    top: 100%;
+    background-color: #3D0C02;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.footerbottom {
+    color: darkred;
+    display: flex;
+}
+
+
+.socialIcons {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 50vh;
-    background-image: url("mixedgifs.gif");
-    background-size: cover;
+    gap: 10px;
+    transition: all 0.3s ease 0s;
 }
 
-.event{
-    text-align: center;
-    color: darkred;
-    font-size: larger;
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease 0s;
 }
- li{
-     display: inline;
- }
+
+.socialIcons a i {
+    font-size: 2em;
+    color: red;
+    opacity: 0.9;
+    transition: all 0.3s ease 0s;
+}
+
+.socialIcons a:hover {
+    background-color: black;
+}
+
+.socialIcons a:hover i {
+    color: white;
+
+}
+
+span a{
+    transition: 0.5s ease 0s;
+}
+
+span a:hover {
+    color: lightcoral;
+
+}
