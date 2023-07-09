@@ -2,12 +2,22 @@
     font-family: "Bebas Neue", serif;
     margin: 0;
     padding: 0;
+    transition: 0.35s ease;
 }
 
 body {
     color: darkred;
     background-color: black;
+    background-image: url("backgroundimage2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     min-height: 100vh;
+    transition: none;
+}
+
+body, html{
+    height: 100%;
 }
 
 li a button {
@@ -38,6 +48,7 @@ header {
 
 .navlinks li a {
     transition: all 0.3s ease 0s;
+    text-decoration: none;
 }
 
 .navlinks li a:hover {
@@ -66,11 +77,16 @@ h1 {
     margin-right: auto;
 }
 
+.clubdescription{
+    text-align: center;
+}
+
 
 .eventlist {
     list-style: none;
     text-align: center;
     font-size: 25px;
+    background-color: black;
 }
 
 .eventlist li {
@@ -129,9 +145,9 @@ h1 {
 
 span a{
     transition: 0.5s ease 0s;
+    text-decoration: none;
 }
 
 span a:hover {
     color: lightcoral;
-
 }
