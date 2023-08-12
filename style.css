@@ -1,153 +1,203 @@
-* {
-    font-family: "Bebas Neue", serif;
-    margin: 0;
+*{
     padding: 0;
-    transition: 0.35s ease;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Bebas Neue", sans-serif, Serif;
 }
 
 body {
-    color: darkred;
     background-color: black;
     background-image: url("backgroundimage2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 100vh;
     transition: none;
+    height: 100%
 }
 
-body, html{
+html{
     height: 100%;
 }
 
-li a button {
+.compname{
+    flex-wrap: nowrap;
+    color: red;
+}
+
+.compname a{
+    color: red;
     text-decoration: none;
+}
+
+ul{
+    display: flex;
+}
+
+.navlinks a{
+    text-decoration: none;
+    color: red;
+    letter-spacing: 2px;
+    padding: 20px;
+    flex-grow: 1;
+    transition: 0.25s ease;
+    font-size: 20px;
+}
+
+.navlinks a:hover{
+    color: #D6FF59;
+    text-decoration: underline;
 }
 
 header {
-    display: flex;
-    justify-content: flex-end;
     align-items: center;
-    padding: 30px 10%;
+    justify-content: space-between;
+    display: flex;
     background-color: black;
+    padding: 15px;
 }
 
-.logo {
-    cursor: pointer;
-}
+.event{
+    color: red;
 
-.navlinks {
-    list-style: none;
 }
-
-.navlinks li {
-    display: inline-block;
-    padding: 0 20px;
-    font-size: larger;
-}
-
-.navlinks li a {
-    transition: all 0.3s ease 0s;
-    text-decoration: none;
-}
-
-.navlinks li a:hover {
-    color: lightcoral;
-}
-
-button {
-    padding: 9px 25px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-    background-color: darkred;
-    margin-left: 20px;
-}
-
-button:hover {
-    background-color: lightcoral;
-}
-
-a, h1 {
-    color: darkred;
-}
-
-h1 {
-    margin-right: auto;
-}
-
-.clubdescription{
-    text-align: center;
-}
-
 
 .eventlist {
     list-style: none;
-    text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     background-color: black;
+    justify-content: center;
+    gap: 15px;
+
 }
 
-.eventlist li {
-    display: inline-block;
-    letter-spacing: 5px;
+.eventlist li::before, li::after{
+    content: " <3 ";
 }
 
-.footer {
+.clubdescription{
+    color: white;
+    text-align: center;
+    top: 50%;
+    position: sticky;
+    font-size: 25px;
+    font-family: 'Roboto' , sans-serif;
+}
+
+button{
+    background-color: red;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+footer{
     position: sticky;
     top: 100%;
-    background-color: #3D0C02;
-}
-
-.footer-container {
+    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-}
-
-.footerbottom {
-    color: darkred;
-    display: flex;
-}
-
-
-.socialIcons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    transition: all 0.3s ease 0s;
-}
-
-.socialIcons a {
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 50%;
-    transition: all 0.3s ease 0s;
-}
-
-.socialIcons a i {
-    font-size: 2em;
     color: red;
-    opacity: 0.9;
-    transition: all 0.3s ease 0s;
 }
 
-.socialIcons a:hover {
-    background-color: black;
+.footer a{
+    color: red;
+    text-decoration: underline;
+    transition: 0.15s ease;
 }
 
-.socialIcons a:hover i {
-    color: white;
-
-}
-
-span a{
-    transition: 0.5s ease 0s;
+.footer a:hover{
     text-decoration: none;
+    color: black;
 }
 
-span a:hover {
-    color: lightcoral;
+.socialIcons{
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+@media only screen and (max-width: 998px){
+    .eventlist{
+        font-size: 16px;
+    }
+    .socialIcons{
+        font-size: 20px;
+    }
+
+    .footer h1,
+    .footer h2{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 895px){
+    header{
+        justify-items: center;
+    }
+    header a{
+        font-size: 20px;
+    }
+
+    .navlinks{
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 843px){
+    .navlinks a{
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width : 807px){
+    .eventlist{
+        font-size: 14px;
+        width: 100%;
+    }
+
+    header a{
+        font-size: 25px;
+    }
+
+    .navlinks{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .footer h1,
+    .footer h2{
+        font-size: 20px;
+    }
+
+    .eventlist{
+        display: none;
+    }
+    .clubdescription{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 634px) {
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer h1,
+    .footer h2{
+        font-size: 13px;
+    }
+
+    .clubdescription{
+        background-color: black;
+    }
 }
