@@ -42,6 +42,7 @@ ul{
     flex-grow: 1;
     transition: 0.25s ease;
     font-size: 20px;
+    align-items: center;
 }
 
 .navlinks a:hover{
@@ -49,12 +50,14 @@ ul{
     text-decoration: underline;
 }
 
+
+
 header {
     align-items: center;
     justify-content: space-between;
     display: flex;
     background-color: black;
-    padding: 15px;
+    padding: 10px;
 }
 
 .event{
@@ -119,6 +122,11 @@ footer{
 }
 
 @media only screen and (max-width: 998px){
+    body{
+        width: auto;
+        padding: 0%;
+        margin: 0%;
+    }
     .eventlist{
         font-size: 16px;
     }
@@ -129,6 +137,10 @@ footer{
     .footer h1,
     .footer h2{
         font-size: 25px;
+    }
+
+    .icon{
+        display: none;
     }
 }
 
@@ -148,6 +160,7 @@ footer{
 @media only screen and (max-width: 843px){
     .navlinks a{
         font-size: 17px;
+        text-align: center;
     }
 }
 
@@ -157,27 +170,57 @@ footer{
         width: 100%;
     }
 
+    header{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
     header a{
         font-size: 25px;
     }
 
-    .navlinks{
-        display: none;
+    .navlinks li{
+        display: contents;
     }
 }
 
 @media only screen and (max-width: 768px){
     .footer h1,
     .footer h2{
-        font-size: 20px;
+        font-size: 23px;
+        justify-content: center;
+    }
+
+    header ul li{
+        display: none;
+    }
+
+    .compname{
+        text-align: center;
+        width: 100%;
+    }
+
+    .navlinks{
+        border-top: 1px solid red;
+    }
+
+    .compname a{
+    font-size: 50px;
+    }
+    button{
+        display: none;
     }
 
     .eventlist{
         display: none;
     }
     .clubdescription{
-        font-size: 18px;
+        font-size: 25px;
+        background-color: black;
     }
+
+
 }
 
 @media only screen and (max-width: 634px) {
@@ -192,9 +235,43 @@ footer{
         display: flex;
         flex-direction: column;
     }
+
+    body{
+        width: auto;
+    }
+
+    .navlinks{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navlinks li a{
+        padding: 0;
+        margin: 3px;
+    }
+
+    .navlinks li::after{
+        content: "|";
+        color: lightcoral
+        
+    }
+
+
+    .clubdescription{
+        font-size: 20px;
+    }
+
+    header{
+        width: 100%;
+    }
+
+    .icon{
+        display: contents;
+    }
+
     .footer h1,
     .footer h2{
-        font-size: 13px;
+        font-size: 20px;
     }
 
     .clubdescription{
